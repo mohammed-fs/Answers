@@ -98,10 +98,10 @@ Such an event can, for example be a push event, so that the jobs run every time 
 *	specify or define the order in which actions and commands are executed in order  to fulfil a job.
 *	they contain a collection of actions, that enable you accomplish the specified job.
 
-     <h4>uses:</h4> actions/stale@v1 => refers to the version of the stale
-      with:  => specifies the attributes of token, message and label this step is going to use, as follows \
-        repo-token: ${{ secrets.GITHUB_TOKEN }} \
-        stale-issue-message: 'Stale issue message' \
-        stale-pr-message: 'Stale pull request message' \
-        stale-issue-label: 'no-issue-activity' \
-        stale-pr-label: 'no-pr-activity' \
+<h4>uses:</h4> actions/stale@v1 => refers to the version of the stale
+with:  => specifies the attributes of token, message and label this step is going to use, as follows 
+repo-token: ${{ secrets.GITHUB_TOKEN }} 
+stale-issue-message: 'Stale issue message' 
+stale-pr-message: 'Stale pull request message' 
+stale-issue-label: 'no-issue-activity' 
+stale-pr-label: 'no-pr-activity' 
