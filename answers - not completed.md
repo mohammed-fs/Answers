@@ -46,3 +46,27 @@ GitHub provides a set of these pre-configured runners that you are using when yo
 ## VI (Open question)
 #### Can you change the configuration of an `hosted runner`? What do you need to do if none of the `hosted runner` meet your needs?
 Yes. create and host self-hosted runner, Self-hosted runners offer more control of hardware, operating system, and software tools than GitHub-hosted runners provide. With self-hosted runners, you can choose to create a custom hardware configuration with more processing power or memory to run larger jobs, install software available on your local network, and choose an operating system not offered by GitHub-hosted runners. Self-hosted runners can be physical, virtual, in a container, on-premises, or in a cloud.
+
+## VII (Open question)
+#### Describe (in your own words) what the workflow below does with as much details as possible.
+```Yaml
+name: Mark stale issues and pull requests
+
+on:
+  schedule:
+  - cron: "30 1 * * *"
+
+jobs:
+  stale:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/stale@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-issue-message: 'Stale issue message'
+        stale-pr-message: 'Stale pull request message'
+        stale-issue-label: 'no-issue-activity'
+        stale-pr-label: 'no-pr-activity'
+```
