@@ -71,7 +71,7 @@ jobs:
         stale-pr-label: 'no-pr-activity'
 ```
 
-<h3>name:</h3> Mark stale issues and pull requests: 
+<h4>name:</h4> Mark stale issues and pull requests: 
 name: (refers to the name of the workflow as it will appear in the Actions tab of the GitHub repository.)
 
 on: specifies the event that automatically triggers the workflow file. 
