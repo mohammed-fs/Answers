@@ -30,3 +30,10 @@
 
 – Artifacts enable you to share data between jobs in a workflow and store data once completed. \
 – Artifacts allow you to persist data after a job has complete and share that data with same workflow.
+
+## IV (Open question)
+#### Why is a versioning tool like git so indispensable for CI/CD?
+VCS tools is a vital link between development and deployment, 
+and a key component of continuous integration/continuous deployment (CI/CD) pipelines. A VCS is usually the place where the CI in CI/CD begins. \
+The VCS creates the source code of record and organizes it for the build. \
+<ins>Branching workflows</ins> feature that VCS provide let you tackle thorny bugs, try out new technologies, or just start coding a new feature from scratch without the risk that your changes will prevent your teammates from forging ahead with their own tasks.
