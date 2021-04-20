@@ -70,3 +70,26 @@ jobs:
         stale-issue-label: 'no-issue-activity'
         stale-pr-label: 'no-pr-activity'
 ```
+
+name: Mark stale issues and pull requests: 
+name: (refers to the name of the workflow as it will appear in the Actions tab of the GitHub repository.)
+
+on: specifies the event that automatically triggers the workflow file. 
+Such an event can, for example be a push event, so that the jobs run every time someone pushes a change to the repository. You can set up the workflow to only run on certain branches, paths, or tags. 
+
+  schedule: (refers to how often and when the specific trigger event is fired. You can schedule a workflow to run at specific UTC times using POSIX cron syntax. Scheduled workflows run on the latest commit on the default or base branch. The shortest interval you can run scheduled workflows is once every 5 minutes. This example triggers the workflow every day at 5:30 and 17:30 UTC:)
+  - cron: "30 1 * * *"
+
+jobs: are triggered by an event and composed of a collection steps, which in turn consisting of specific actions. Those actions can be shell scripts or other stand alone commands
+stale: is a branch that has not had any commits in the previous 3 months. This generally indicates an old/unmaintained/not current branch. ... So a "stale git branch" is generally a branch of the repository that hasn't been touched in a long time
+
+runs-on: ubuntu-latest  (Configures the job to run and be executed on the latest fresh virtual machine (container)based on Ubuntu Linux OS based runner hosted by GitHub.) 
+
+ Steps: (specify or define the order in which actions and commands are executed in order  to fulfil the purpose of a job; they contain a collection of actions, that enable you accomplish the specified job.)
+    - uses: actions/stale@v1 => refers to the version of the stale
+      with:  => specifies the attributes of token, message and label this step is going to use, as follows
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-issue-message: 'Stale issue message'
+        stale-pr-message: 'Stale pull request message'
+        stale-issue-label: 'no-issue-activity'
+        stale-pr-label: 'no-pr-activity'
