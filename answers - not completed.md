@@ -42,3 +42,7 @@ The VCS creates the source code of record and organizes it for the build. \
 #### In the context of Github Actions, what’s a `runner`? What type of `runner` can you find/use?
 It is a machine that has a target operating system (OS) as well as a set of software and/or tools you may desire for completing your job.   
 GitHub provides a set of these pre-configured runners that you are using when you use the runs-on label and use any one of the combination of: windows-latest, ubuntu-latest (or ubuntu-18.04 or ubuntu-16.04), macosx-latest.
+
+## VI (Open question)
+#### Can you change the configuration of an `hosted runner`? What do you need to do if none of the `hosted runner` meet your needs?
+Yes. create and host self-hosted runner, Self-hosted runners offer more control of hardware, operating system, and software tools than GitHub-hosted runners provide. With self-hosted runners, you can choose to create a custom hardware configuration with more processing power or memory to run larger jobs, install software available on your local network, and choose an operating system not offered by GitHub-hosted runners. Self-hosted runners can be physical, virtual, in a container, on-premises, or in a cloud.
