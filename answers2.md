@@ -91,12 +91,12 @@ Such an event can, for example be a push event, so that the jobs run every time 
 •	So a "stale git branch" is generally a branch of the repository that hasn't been touched in a long time
 
 <h4>runs-on:</h4> ubuntu-latest 
-•	(Configures the job to run and be executed on the latest fresh virtual machine (container)
-•	based on Ubuntu Linux OS based runner hosted by GitHub.) 
+*	Configures the job to run and be executed on the latest fresh virtual machine (container).
+*	based on Ubuntu Linux OS based runner hosted by GitHub.) 
 
  <h4>Steps:</h4> 
-•	(specify or define the order in which actions and commands are executed in order  to fulfil a job; 
-•	they contain a collection of actions, that enable you accomplish the specified job.)
+*	specify or define the order in which actions and commands are executed in order  to fulfil a job.
+*	they contain a collection of actions, that enable you accomplish the specified job.
 
      <h4>uses:</h4> actions/stale@v1 => refers to the version of the stale
       with:  => specifies the attributes of token, message and label this step is going to use, as follows \
