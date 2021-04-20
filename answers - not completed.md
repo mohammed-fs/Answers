@@ -21,12 +21,12 @@
 ## III (Open question)
 #### When talking about CI/CD, what’s an `artifact`? Why is it important for the continuous deployment part of a CI/CD workflow?
 – In CI/CD systems, artifacts refer to the output of your build process that you would deploy. This could be a jar, tar or binary. You then deploy these artifacts onto your production servers.\
-– For pushes and pull requests, GitHub stores artifacts for 90 days. The retention period for a pull request restarts each time someone pushes a new commit to the pull request.\
+– For pushes and pull requests, GitHub stores artifacts for 90 days. The retention period for a pull request restarts each time someone pushes a new commit to the pull request.
 #### <ins>These are some of the common artifacts that you can upload:</ins>
 • Log files and core dumps \
 • Test results, failures, and screenshots \
 • Binary or compressed files \
-• Stress test performance output and code coverage results \
+• Stress test performance output and code coverage results 
 
 – Artifacts enable you to share data between jobs in a workflow and store data once completed. \
 – Artifacts allow you to persist data after a job has complete and share that data with same workflow.
